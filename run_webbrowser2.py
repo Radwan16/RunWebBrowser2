@@ -17,7 +17,7 @@ cursor = db.cursor()
 entry = t.Entry(window, width=10,justify='center').pack()
 def open():
     global entry
-    query = f'SELECT * FROM score WHERE id=={entry}'
+    query = 'SELECT * FROM score WHERE id=='+entry+';'
 
     cursor.execute(query)
     rows = cursor.fetchall()

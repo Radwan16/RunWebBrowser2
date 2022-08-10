@@ -14,9 +14,10 @@ show_records()
 db = sqlite3.connect('run_webbrowser2_0.db')
 cursor = db.cursor()
 
-entry = str(t.Entry(window, width=10,justify='center').pack())
+entry = str(t.Entry(window, width=10,justify='center'))
 def open():
     global entry
+    entry==entry.pack()
     query = f'SELECT Link FROM score WHERE id=={entry}'
     cursor.execute(query)
     rows = cursor.fetchall()
